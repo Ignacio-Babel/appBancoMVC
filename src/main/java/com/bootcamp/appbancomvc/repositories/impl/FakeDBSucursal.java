@@ -14,6 +14,9 @@ public class FakeDBSucursal implements IFakeDBSucursal {
 
     private Map<Integer, Sucursal> sucursales;
 
+    public  FakeDBSucursal(){
+        sucursales = new HashMap<>();
+    }
     @Override
     public void init() {
         sucursales = new HashMap<>();
