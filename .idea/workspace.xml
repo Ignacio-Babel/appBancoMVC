@@ -4,32 +4,93 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05e5a6ee-a897-4a58-a874-8a0b72b98906" name="Changes" comment="" />
+    <list default="true" id="05e5a6ee-a897-4a58-a874-8a0b72b98906" name="Changes" comment="Finalización de arquetipo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/ISucursalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/SucursalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/models/Sucursal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/repositories/IFakeDBSucursal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/repositories/impl/FakeDBSucursal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/services/ISucursalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/services/impl/SucursalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jmormar2004-babel"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Ignacio-Babel/appBancoMVC.git",
+    "accountId": "51097b58-a29a-4a22-b120-4c465dfe8911"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 8
 }]]></component>
   <component name="ProjectId" id="2fAwUJl6Nsdr0oUpfQWs88YsW4O" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.appBancoMVC [clean,install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bootcamp.appbancomvc.Main" />
+      <module name="appBancoMVC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bootcamp.appbancomvc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -39,6 +100,29 @@
       <option name="presentableId" value="Default" />
       <updated>1713257207651</updated>
     </task>
+    <task id="LOCAL-00001" summary="Creación de arquetipo">
+      <option name="closed" value="true" />
+      <created>1713257275867</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713257275867</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Finalización de arquetipo">
+      <option name="closed" value="true" />
+      <created>1713257481655</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713257481655</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Creación de arquetipo" />
+    <MESSAGE value="Finalización de arquetipo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalización de arquetipo" />
   </component>
 </project>
