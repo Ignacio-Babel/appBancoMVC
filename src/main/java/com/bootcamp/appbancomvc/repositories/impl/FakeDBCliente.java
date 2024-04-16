@@ -4,6 +4,7 @@ import com.bootcamp.appbancomvc.models.Cliente;
 import com.bootcamp.appbancomvc.repositories.IFakeDBCliente;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,16 +22,17 @@ public class FakeDBCliente implements IFakeDBCliente {
 
     @Override
     public void modify(int id, Cliente cliente) {
-
+        clientes.put(id,cliente);
     }
 
     @Override
     public List<Cliente> list() {
-        return null;
+        return new ArrayList<>(clientes.values());
     }
 
     @Override
     public Cliente getCliente(Cliente cliente) {
-        return null;
+        List<Cliente> listaClientes =list();
+        return listaClientes.stream().filter(c -> c.equals(cliente)).findFirst().orElse(null);
     }
 }
