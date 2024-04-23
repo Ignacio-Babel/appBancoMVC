@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05e5a6ee-a897-4a58-a874-8a0b72b98906" name="Changes" comment="Implementación de front-end, continuar que no chuta">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cuenta-info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/CuentaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/CuentaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/SucursalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/SucursalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sucursal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sucursales.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/CuentaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/CuentaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/repositories/IFakeDBCuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/repositories/IFakeDBCuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/repositories/impl/FakeDBCuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/repositories/impl/FakeDBCuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/services/ICuentaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/services/ICuentaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/services/impl/CuentaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/services/impl/CuentaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cuentas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cuentas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,20 +58,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.appBancoMVC [clean,install].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ignaciogonzalez-bueno/Developer/Hello_World/11/MVC"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.appBancoMVC [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ignaciogonzalez-bueno/Developer/Hello_World/11/MVC&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean install" />

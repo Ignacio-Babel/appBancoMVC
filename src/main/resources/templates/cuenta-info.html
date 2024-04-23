@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuenta Information</title>
+</head>
+<body>
+
+<h2>Cuenta Information</h2>
+<table>
+    <tr>
+        <th>Numero de cuenta</th>
+        <th>Id de la sucursal</th>
+        <th>Id del cliente</th>
+        <th>Balance</th>
+    </tr>
+    <tr>
+        <td th:text="${cuenta.numeroCuenta}"></td>
+        <td th:text="${cuenta.sucursalId}"></td>
+        <td th:text="${cuenta.clienteId}"></td>
+        <td>
+            <form th:action="@{/cuentas/} + ${cuenta.numeroCuenta}" method="post">
+                <input type="hidden" name="_method" value="put"/>
+                <label for="editBalance">Nuevo balance:</label>
+                <input type="text" id="editBalance" name="balance" th:value="${cuenta.balance}" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

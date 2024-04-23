@@ -20,9 +20,17 @@ public class CuentaService implements ICuentaService {
 	}
 
 	@Override
-	public boolean mod(int numeroCuenta, Cuenta cuenta) {
+	public void modBalance(int numeroCuenta, float nuevoBalance) {
+		Cuenta cuenta = fakeDBCuenta.getCuentaByNumero(numeroCuenta);
+		if (cuenta != null) {
+			cuenta.setBalance(nuevoBalance);
+			fakeDBCuenta.mod(numeroCuenta, cuenta);
+		}
+	}
 
-		return fakeDBCuenta.mod(numeroCuenta, cuenta);
+	@Override
+	public Cuenta getCuentaByNumero(int numeroCuenta) {
+		return fakeDBCuenta.getCuentaByNumero(numeroCuenta);
 	}
 
 	@Override

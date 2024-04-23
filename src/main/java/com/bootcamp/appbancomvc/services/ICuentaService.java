@@ -8,7 +8,9 @@ public interface ICuentaService {
 
 	int nuevaCuenta(Cuenta cuenta);
 
-	boolean mod(int numeroCuenta, Cuenta cuenta);
+	void modBalance(int numeroCuenta, float nuevoBalance);
+
+	Cuenta getCuentaByNumero(int numeroCuenta);
 
 	List<Cuenta> list();
 
