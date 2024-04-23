@@ -27,7 +27,7 @@
                     <a th:href="@{/sucursal/} + ${sucursal.id}">
                         DETALLE
                     </a>
-                    <form th:action="@{/sucursal/} + ${sucursal.id}" method="delete">
+                    <form th:action="@{/sucursal/} + ${sucursal.id} + @{/delete}" method="post">
                         <button type="submit">Eliminar</button>
                     </form>
 

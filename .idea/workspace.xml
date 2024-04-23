@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05e5a6ee-a897-4a58-a874-8a0b72b98906" name="Changes" comment="Creación de Clientes y algunas cosas">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/sucursal.html" afterDir="false" />
+    <list default="true" id="05e5a6ee-a897-4a58-a874-8a0b72b98906" name="Changes" comment="Implementación de front-end, continuar que no chuta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/ClienteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/CuentaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/CuentaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/SucursalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bootcamp/appbancomvc/controllers/impl/SucursalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sucursal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sucursales.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713263685402</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implementación de front-end, continuar que no chuta">
+      <option name="closed" value="true" />
+      <created>1713860458009</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713860458009</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -143,6 +152,7 @@
     <MESSAGE value="Finalización de arquetipo" />
     <MESSAGE value="Creación de Sucursales y todas sus cosas" />
     <MESSAGE value="Creación de Clientes y algunas cosas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creación de Clientes y algunas cosas" />
+    <MESSAGE value="Implementación de front-end, continuar que no chuta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementación de front-end, continuar que no chuta" />
   </component>
 </project>

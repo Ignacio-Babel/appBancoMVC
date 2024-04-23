@@ -1,15 +1,16 @@
-package com.bootcamp.appbancomvc.controllers.impl;
+package com.bootcamp.appbancomvc.controllers;
 
-import com.bootcamp.appbancomvc.controllers.ISucursalController;
 import com.bootcamp.appbancomvc.models.Sucursal;
 import com.bootcamp.appbancomvc.services.ISucursalService;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping(value = "/sucursales")
-public class SucursalController implements ISucursalController {
+public class SucursalController{
 
     private final ISucursalService sucursalService;
 
@@ -18,31 +19,27 @@ public class SucursalController implements ISucursalController {
     }
 
     @PostMapping("/init")
-    @Override
     public void initialize() {
         this.sucursalService.init();
     }
 
     @PostMapping
-    @Override
-    public int add(@RequestBody Sucursal sucursal) {
-        return this.sucursalService.add(sucursal);
+    public String add(@ModelAttribute("sucursal") Sucursal sucursal) {
+        this.sucursalService.add(sucursal);
+        return "redirect:/sucursales";
     }
 
     @PutMapping("/{idSucursal}")
-    @Override
-    public void modify(@PathVariable int idSucursal, @RequestBody Sucursal newSucursal) {
+    public void modify(@PathVariable int idSucursal, @ModelAttribute("sucursal") Sucursal newSucursal) {
         this.sucursalService.modify(idSucursal, newSucursal);
     }
 
     @GetMapping
-    @Override
-    public List<Sucursal> list() {
-        return this.sucursalService.list();
+    public void list(Model model) {
+        model.addAttribute("sucursales", this.sucursalService.list());
     }
 
-    @DeleteMapping("/{idSucursal}")
-    @Override
+    @PostMapping("/{idSucursal}/delete")
     public Sucursal delete(@PathVariable int idSucursal) {
         return this.sucursalService.delete(idSucursal);
     }
