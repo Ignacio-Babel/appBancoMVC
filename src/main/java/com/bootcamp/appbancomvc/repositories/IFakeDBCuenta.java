@@ -8,7 +8,9 @@ public interface IFakeDBCuenta {
 
 	 int nuevaCuenta(Cuenta cuenta);
 
-	 boolean mod(int numeroCuenta, Cuenta cuenta);
+	Cuenta getCuentaByNumero(int numeroCuenta);
+
+	boolean mod(int numeroCuenta, Cuenta cuenta);
 
 	 List<Cuenta> list();
 

@@ -1,8 +1,10 @@
 package com.bootcamp.appbancomvc.controllers;
 
 import com.bootcamp.appbancomvc.models.Cuenta;
+import com.bootcamp.appbancomvc.models.Sucursal;
 import com.bootcamp.appbancomvc.services.ICuentaService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,28 +13,39 @@ import java.util.List;
 @RequestMapping("/cuentas")
 public class CuentaController {
 
-	ICuentaService cuentaService;
+	private final ICuentaService cuentaService;
 
-	public CuentaController(ICuentaService cuentaService){
+	public CuentaController(ICuentaService cuentaService) {
 		this.cuentaService = cuentaService;
 	}
+
 	@PostMapping
-	public int nuevaCuenta(Cuenta cuenta) {
-		return this.cuentaService.nuevaCuenta(cuenta);
+	public String nuevaCuenta(@ModelAttribute("cuenta") Cuenta cuenta) {
+		this.cuentaService.nuevaCuenta(cuenta);
+		return "redirect:/cuentas";
 	}
 
-	@PutMapping("/{idCuenta}")
-	public void mod(@PathVariable int idCuenta,@RequestBody Cuenta cuenta) {
-		this.cuentaService.mod(idCuenta, cuenta);
+	@PostMapping("/{numeroCuenta}")
+	public String mod(@PathVariable int numeroCuenta, @RequestParam("balance") float nuevoBalance) {
+		this.cuentaService.modBalance(numeroCuenta, nuevoBalance);
+		return "redirect:/cuentas";
+	}
+
+	@GetMapping("/{numeroCuenta}/info")
+	public String showCuentaInfo(@PathVariable int numeroCuenta, Model model) {
+		Cuenta cuenta = cuentaService.getCuentaByNumero(numeroCuenta);
+		model.addAttribute("cuenta", cuenta);
+		return "cuenta-info";
 	}
 
 	@GetMapping
-	public List<Cuenta> list() {
-		return this.cuentaService.list();
+	public void list(Model model) {
+		model.addAttribute("cuentas", this.cuentaService.list());
 	}
 
-	@DeleteMapping("/{idCuenta}")
-	public Cuenta delete(@PathVariable int idCuenta) {
-		return this.cuentaService.delete(idCuenta);
+	@PostMapping("/{numeroCuenta}/delete")
+	public String delete(@PathVariable int numeroCuenta) {
+		this.cuentaService.delete(numeroCuenta);
+		return "redirect:/cuentas";
 	}
 }

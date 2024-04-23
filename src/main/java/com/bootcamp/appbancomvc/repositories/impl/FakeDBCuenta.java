@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Repository
 public class FakeDBCuenta implements IFakeDBCuenta {
@@ -20,6 +19,16 @@ public class FakeDBCuenta implements IFakeDBCuenta {
 	public int nuevaCuenta(Cuenta cuenta) {
 		cuentas.add(cuenta);
 		return cuenta.getNumeroCuenta();
+	}
+
+	@Override
+	public Cuenta getCuentaByNumero(int numeroCuenta) {
+		for (Cuenta cuenta : cuentas) {
+			if (cuenta.getNumeroCuenta() == numeroCuenta) {
+				return cuenta;
+			}
+		}
+		return null;
 	}
 
 	@Override

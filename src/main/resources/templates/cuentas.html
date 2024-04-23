@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cuentas</title>
 </head>
 <body>
 
+<table>
+    <thead>
+    <tr>
+        <th>Numero de cuenta</th>
+        <th>Balance</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cuenta : ${cuentas}">
+        <td th:text="${cuenta.numeroCuenta}"></td>
+        <td th:text="${cuenta.balance}"></td>
+        <td>
+            <a th:href="@{/cuentas/} + ${cuenta.numeroCuenta} + @{/info}">
+                <button type="button">Info</button>
+            </a>
+            <form th:action="@{/cuentas/} + ${cuenta.numeroCuenta} + @{/delete}" method="post">
+                <button type="submit">Eliminar</button>
+            </form>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+
+<h2>Agregar Nueva Cuenta</h2>
+<form th:action="@{/cuentas}" method="post">
+    <label for="numeroCuenta">Numero de cuenta:</label>
+    <input type="text" id="numeroCuenta" name="numeroCuenta" required>
+    <br>
+    <label for="sucursalId">Id de la sucursa:</label>
+    <input type="text" id="sucursalId" name="sucursalId" required>
+    <br>
+    <label for="clienteId">Id del cliente:</label>
+    <input type="text" id="clienteId" name="clienteId" required>
+    <br>
+    <label for="balance">Balance:</label>
+    <input type="text" id="balance" name="balance" required>
+    <br>
+    <button type="submit">Agregar Cuenta</button>
+</form>
 </body>
 </html>
