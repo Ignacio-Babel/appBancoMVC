@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Sucursal Information</title>
+</head>
+<body>
+
+<h2>Sucursal Information</h2>
+<table>
+    <thead>
+    <tr>
+        <!--    <th>ID</th>-->
+        <th>Nombre</th>
+        <th>Direccion</th>
+        <th>Director</th>
+        <th>Opciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${sucursal.nombre}"></td>
+        <td th:text="${sucursal.direccion}"></td>
+        <td th:text="${sucursal.director}"></td>
+        <td>
+            <form th:action="@{/sucursales/} + ${sucursal.id}" method="post">
+                <input type="hidden" name="_method" value="put"/>
+                <label for="editName">Nuevo nombre:</label>
+                <input type="text" id="editName" name="nombre" th:value="${sucursal.nombre}" required>
+                <label for="editDireccion">Nuevo nombre:</label>
+                <input type="text" id="editDireccion" name="direccion" th:value="${sucursal.direccion}" required>
+                <label for="editDirector">Nuevo nombre:</label>
+                <input type="text" id="editDirector" name="director" th:value="${sucursal.director}" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

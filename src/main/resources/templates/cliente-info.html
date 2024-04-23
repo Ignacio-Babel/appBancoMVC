@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cliente Information</title>
 </head>
 <body>
-<p>cliente</p>
+
+<h2>Cliente Information</h2>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>DNI</th>
+        <th>Correo electrónico</th>
+        <th>Teléfono</th>
+        <th>Dirección</th>
+    </tr>
+    <tr>
+        <td th:text="${cliente.nombre}"></td>
+        <td th:text="${cliente.dni}"></td>
+        <td th:text="${cliente.email}"></td>
+        <td th:text="${cliente.telefono}"></td>
+        <td th:text="${cliente.direccion}"></td>
+        <td>
+            <form th:action="@{/clientes/} + ${cliente.id}" method="post">
+                <input type="hidden" name="_method" value="put"/>
+                <label for="editNombre">Nuevo nombre:</label>
+                <input type="text" id="editNombre" name="nombre" th:value="${cliente.nombre}" required>
+                <label for="editDNI">Nuevo DNI:</label>
+                <input type="text" id="editDNI" name="DNI" th:value="${cliente.dni}" required>
+                <label for="editCorreo">Nuevo Correo:</label>
+                <input type="text" id="editCorreo" name="correo" th:value="${cliente.email}" required>
+                <label for="editTelefono">Nuevo Teléfono:</label>
+                <input type="text" id="editTelefono" name="telefono" th:value="${cliente.telefono}" required>
+                <label for="editDireccion">Nueva Dirección:</label>
+                <input type="text" id="editDireccion" name="direccion" th:value="${cliente.direccion}" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </td>
+    </tr>
+</table>
+
+<!--
+    private String nombre;
+    private String dni;
+    private String email;
+    private String telefono;
+    private String direccion;
+-->
+
 </body>
 </html>

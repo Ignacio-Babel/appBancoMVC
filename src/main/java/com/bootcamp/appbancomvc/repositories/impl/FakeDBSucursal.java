@@ -13,7 +13,7 @@ import java.util.Map;
 public class FakeDBSucursal implements IFakeDBSucursal {
 
     private Map<Integer, Sucursal> sucursales;
-    Integer secuenciSucursal = 1;
+    Integer secuenciSucursal = 0;
     public  FakeDBSucursal(){
         sucursales = new HashMap<>();
     }
@@ -24,7 +24,9 @@ public class FakeDBSucursal implements IFakeDBSucursal {
 
     @Override
     public int add(Sucursal sucursal) {
-        sucursales.put(secuenciSucursal++, sucursal);
+        secuenciSucursal++;
+        sucursal.setId(secuenciSucursal);
+        sucursales.put(secuenciSucursal, sucursal);
         return secuenciSucursal;
     }
 

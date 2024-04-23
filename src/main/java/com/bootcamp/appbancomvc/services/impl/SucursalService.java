@@ -26,6 +26,14 @@ public class SucursalService implements ISucursalService {
         return this.fakeDBSucursal.add(sucursal);
     }
 
+    public Sucursal get(int id){
+        List<Sucursal> sucursales = this.fakeDBSucursal.list();
+        for (Sucursal sucursale : sucursales) {
+            if(sucursale.getId() == id) return sucursale;
+        }
+        return null;
+    }
+
     @Override
     public void modify(int idSucursal, Sucursal newSucursal) {
         this.fakeDBSucursal.modify(idSucursal, newSucursal);

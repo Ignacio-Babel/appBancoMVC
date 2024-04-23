@@ -29,9 +29,16 @@ public class SucursalController{
         return "redirect:/sucursales";
     }
 
-    @PutMapping("/{idSucursal}")
-    public void modify(@PathVariable int idSucursal, @ModelAttribute("sucursal") Sucursal newSucursal) {
+    @PostMapping("/{idSucursal}")
+    public String modify(@PathVariable int idSucursal, @ModelAttribute("sucursal") Sucursal newSucursal) {
         this.sucursalService.modify(idSucursal, newSucursal);
+        return "redirect:/sucursales";
+    }
+
+    @GetMapping("/{idSucursal}")
+    public String get(@PathVariable int idSucursal, Model model) {
+        model.addAttribute("sucursal", this.sucursalService.get(idSucursal));
+        return "sucursal-info";
     }
 
     @GetMapping
@@ -40,7 +47,8 @@ public class SucursalController{
     }
 
     @PostMapping("/{idSucursal}/delete")
-    public Sucursal delete(@PathVariable int idSucursal) {
-        return this.sucursalService.delete(idSucursal);
+    public String delete(@PathVariable int idSucursal) {
+        this.sucursalService.delete(idSucursal);
+        return "redirect:/sucursales";
     }
 }

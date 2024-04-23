@@ -26,9 +26,10 @@ public class ClienteController {
         this.clienteService.add(cliente);
         return "redirect:/clientes";
     }
-    @PutMapping("/{id}")
-    public void modify(@PathVariable int id, Cliente cliente) {
+    @PostMapping("/{id}")
+    public String modify(@PathVariable int id, Cliente cliente) {
         clienteService.modify(id,cliente);
+        return "redirect:/clientes";
     }
     @GetMapping()
     public void list(Model model) {
