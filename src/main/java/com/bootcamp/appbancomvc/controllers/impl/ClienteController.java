@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/cliente")
+@RequestMapping("/clientes")
 public class ClienteController implements IClienteController {
     IClienteService clienteService;
     public ClienteController(IClienteService clienteService){this.clienteService = clienteService;};
