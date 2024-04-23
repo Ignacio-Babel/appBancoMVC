@@ -18,6 +18,11 @@ public class ClienteService implements IClienteService {
     }
 
     @Override
+    public int add(Cliente cliente) {
+        return fakeDBClienteI.add(cliente);
+    }
+
+    @Override
     public void modify(int id, Cliente cliente) {
         fakeDBClienteI.modify(id,cliente);
     }
@@ -30,5 +35,10 @@ public class ClienteService implements IClienteService {
     @Override
     public Cliente getCliente(Cliente cliente) {
         return fakeDBClienteI.getCliente(cliente);
+    }
+
+    @Override
+    public Cliente delete(int idCliente) {
+        return this.fakeDBClienteI.delete(idCliente);
     }
 }

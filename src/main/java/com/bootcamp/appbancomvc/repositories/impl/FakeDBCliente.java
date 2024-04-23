@@ -21,6 +21,14 @@ public class FakeDBCliente implements IFakeDBCliente {
     }
 
     @Override
+    public int add(Cliente cliente) {
+        int id = clientes.size() + 1;
+        cliente.setId(id);
+        clientes.put(id, cliente);
+        return id;
+    }
+
+    @Override
     public void modify(int id, Cliente cliente) {
         clientes.put(id,cliente);
     }
@@ -34,5 +42,10 @@ public class FakeDBCliente implements IFakeDBCliente {
     public Cliente getCliente(Cliente cliente) {
         List<Cliente> listaClientes =list();
         return listaClientes.stream().filter(c -> c.equals(cliente)).findFirst().orElse(null);
+    }
+
+    @Override
+    public Cliente delete(int idCliente) {
+        return clientes.remove(idCliente);
     }
 }
