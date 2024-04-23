@@ -18,7 +18,7 @@ public class CuentaController implements ICuentaController {
 	}
 	@PostMapping
 	@Override
-	public int nuevaCuenta(Cuenta cuenta) {
+	public int nuevaCuenta(@RequestBody Cuenta cuenta) {
 		return this.cuentaService.nuevaCuenta(cuenta);
 	}
 
